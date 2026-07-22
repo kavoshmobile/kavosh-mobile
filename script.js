@@ -216,53 +216,67 @@ observer.observe(el);
 
 
 
-// Fake Tracking System
+// Real Tracking System - Google Sheet
 
-const trackBtn=document.querySelector(".tracking button");
+const trackBtn = document.querySelector(".tracking button");
 
 if(trackBtn){
 
-trackBtn.onclick=()=>{
+trackBtn.onclick = async ()=>{
 
-const input=document.querySelector(".tracking input").value;
+const input = document.querySelector(".tracking input").value.trim();
+const result = document.querySelector(".tracking-result");
 
-const result=document.querySelector(".tracking-result");
+if(input === ""){
 
-if(input===""){
-
-result.innerHTML="⚠ لطفاً شماره یا کد رهگیری را وارد کنید.";
-
-result.style.color="#ff5050";
-
+result.innerHTML = "⚠ لطفاً شماره موبایل را وارد کنید.";
+result.style.color = "#ff5050";
 return;
 
 }
 
-const status=[
+result.innerHTML = "⏳ در حال بررسی...";
+result.style.color = "#00c2ff";
 
-"🟢 ثبت شده",
 
-"🟡 در حال تعمیر",
+try{
 
-"🔵 تست نهایی",
+const response = await fetch(
+"https://script.google.com/macros/s/AKfycbxCsyrCs0hYQ6HeOvSi4RBKAq88ffPfI_Vw5oGNSDu3LQRYFRGWuJyX4hV7qiJgWPiG/exec?phone=" + input
+);
 
-"✅ آماده تحویل"
 
-];
+const data = await response.json();
 
-const random=status[Math.floor(Math.random()*status.length)];
 
-result.innerHTML=random;
+if(data.error){
 
-result.style.color="#00c2ff";
+result.innerHTML = "❌ اطلاعاتی با این شماره پیدا نشد.";
+result.style.color = "#ff5050";
+
+}else{
+
+result.innerHTML = `
+📱 مدل گوشی: ${data.model}<br>
+🔧 مشکل: ${data.problem}<br>
+📌 وضعیت: ${data.status}<br>
+📅 تاریخ: ${data.date}
+`;
+
+result.style.color = "#00c2ff";
+
+}
+
+}catch(error){
+
+result.innerHTML = "⚠ خطا در اتصال به سیستم.";
+result.style.color = "#ff5050";
 
 }
 
 }
 
-
-
-
+}
 // Ripple Effect
 
 document.querySelectorAll("button,a").forEach(btn=>{
