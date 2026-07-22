@@ -3,31 +3,51 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>کاوش موبایل</title>
+<title>کاوش موبایل | فروش و تعمیرات تخصصی موبایل</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta name="description" content="کاوش موبایل | فروش موبایل، تعمیرات تخصصی، لوازم جانبی، خرید و فروش گوشی کارکرده">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+<div id="loader">
+
+<div class="spinner"></div>
+
+</div>
+
+<button id="themeToggle">
+
+🌙
+
+</button>
+
+<button id="topBtn">
+
+⬆
+
+</button>
+
 <header class="hero">
 
 <nav class="navbar">
 
-<button class="menu-btn">
-☰
-</button>
-
 <div class="brand">
 
-<div class="logo">
-📱
-</div>
+<img src="logo.png" class="logo">
 
 <div>
 
@@ -39,9 +59,27 @@
 
 </div>
 
-<a href="tel:09123093706" class="call-btn">
-📞 تماس سریع
+<div class="nav-buttons">
+
+<a href="tel:09123093706">
+
+📞 تماس
+
 </a>
+
+<a href="https://rubika.ir/USERNAME">
+
+💙 روبیکا
+
+</a>
+
+<a href="https://wa.me/989123093706">
+
+💬 واتساپ
+
+</a>
+
+</div>
 
 </nav>
 
@@ -50,33 +88,35 @@
 <div class="hero-text">
 
 <span class="badge">
-💎 اعتماد شما، تخصص ما
+
+⭐ فروش، تعمیرات و خدمات تخصصی موبایل
+
 </span>
 
 <h1>
+
 کاوش موبایل
+
 </h1>
 
 <p>
 
-مرکز تخصصی فروش، تعمیرات و لوازم جانبی موبایل
-<br>
-با بهترین کیفیت و مناسب‌ترین قیمت
+مرکز تخصصی فروش موبایل، تعمیرات تخصصی، لوازم جانبی و خرید و فروش گوشی کارکرده
 
 </p>
 
 <div class="buttons">
 
-<a href="tel:09123093706">
-📞 تماس
+<a href="#services">
+
+مشاهده خدمات
+
 </a>
 
-<a href="https://wa.me/989123093706">
-💬 واتساپ
-</a>
+<a href="#tracking">
 
-<a href="#">
-📍 مسیریابی
+پیگیری تعمیرات
+
 </a>
 
 </div>
@@ -85,7 +125,7 @@
 
 <div class="hero-image">
 
-<img src="images/hero-phone.png" alt="کاوش موبایل">
+<img src="hero-phone.png">
 
 </div>
 
@@ -93,28 +133,29 @@
 
 </header>
 
-<section class="services">
+<section id="services" class="services">
 
 <h2>
+
 خدمات ما
+
 </h2>
 
 <div class="services-grid">
 
 <div class="card">
 
-<div class="icon">
 📱
-</div>
 
-<h3>فروش موبایل</h3>
+<h3>
+
+فروش موبایل
+
+</h3>
 
 <p>
 
 جدید و کارکرده
-<br>
-
-با گارانتی معتبر
 
 </p>
 
@@ -122,18 +163,17 @@
 
 <div class="card">
 
-<div class="icon">
 🔧
-</div>
 
-<h3>تعمیرات تخصصی</h3>
+<h3>
+
+تعمیرات تخصصی
+
+</h3>
 
 <p>
 
-تعمیر انواع موبایل
-<br>
-
-با قطعات اصلی
+تعمیر انواع گوشی
 
 </p>
 
@@ -141,16 +181,15 @@
 
 <div class="card">
 
-<div class="icon">
 🎧
-</div>
 
-<h3>لوازم جانبی</h3>
+<h3>
+
+لوازم جانبی
+
+</h3>
 
 <p>
-
-انواع لوازم جانبی
-<br>
 
 اصل و اورجینال
 
@@ -160,18 +199,17 @@
 
 <div class="card">
 
-<div class="icon">
 ♻️
-</div>
 
-<h3>گوشی کارکرده</h3>
+<h3>
+
+خرید و فروش گوشی
+
+</h3>
 
 <p>
 
-خرید و فروش
-<br>
-
-با بهترین قیمت
+کارکرده
 
 </p>
 
@@ -185,33 +223,89 @@
 
 <div class="stat">
 
-<h2>5000+</h2>
+<h2 data-count="5000">
 
-<p>رضایت مشتری</p>
+0
 
-</div>
+</h2>
 
-<div class="stat">
+<p>
 
-<h2>5000+</h2>
+رضایت مشتریان
 
-<p>تعمیر موفق</p>
-
-</div>
-
-<div class="stat">
-
-<h2>15+</h2>
-
-<p>سال سابقه</p>
+</p>
 
 </div>
 
 <div class="stat">
 
-<h2>24/7</h2>
+<h2 data-count="5000">
 
-<p>پشتیبانی</p>
+0
+
+</h2>
+
+<p>
+
+تعمیر موفق
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2 data-count="15">
+
+0
+
+</h2>
+
+<p>
+
+سال سابقه
+
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+
+24/7
+
+</h2>
+
+<p>
+
+پشتیبانی
+
+</p>
+
+</div>
+
+</section>
+
+<section id="tracking" class="tracking">
+
+<h2>
+
+🔎 پیگیری وضعیت تعمیرات
+
+</h2>
+
+<input type="text" placeholder="کد رهگیری یا شماره موبایل">
+
+<button>
+
+پیگیری
+
+</button>
+
+<div class="tracking-result">
+
+نتیجه پس از اتصال به سیستم نمایش داده می‌شود.
 
 </div>
 
@@ -220,12 +314,51 @@
 <section class="location">
 
 <h2>
-📍 موقعیت ما
+
+📍 آدرس فروشگاه
+
 </h2>
 
 <p>
 
-حصارامیر، خیابان علامه
-<br>
+حصارامیر، خیابان علامه، بین گلبرگ ۲۲ و ۲۴
 
-بین گلبرگ ۲۲ و۲۴
+</p>
+
+</section>
+
+<footer>
+
+<img src="image/logo.png" class="footer-logo">
+
+<h2>
+
+کاوش موبایل
+
+</h2>
+
+<p>
+
+اعتماد شما، تخصص ما
+
+</p>
+
+<p>
+
+📞 09123093706
+
+</p>
+
+<p>
+
+© 2026 Kavosh Mobile
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
